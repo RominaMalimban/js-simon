@@ -6,6 +6,7 @@
 // variabili manipolazione DOM:
 let listNum = document.querySelector(".numbers");
 let timer = document.getElementById("timer");
+let indovina = document.getElementById("indovina");
 
 
 // creo lista di 5 numeri random servendomi della funzione numRandom e arrayRandom:
@@ -20,6 +21,8 @@ let clock = setInterval(function(){
     console.log(seconds);
     if(seconds === -1){
         clearInterval(clock);
+        listNum.style.display = "none";
+        indovina.style.display = "block";
     }else{
         timer.innerHTML = seconds--;
     }
