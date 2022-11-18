@@ -5,13 +5,30 @@
 
 // variabili manipolazione DOM:
 let listNum = document.querySelector(".numbers");
+let timer = document.getElementById("timer");
+
 
 // creo lista di 5 numeri random servendomi della funzione numRandom e arrayRandom:
 let myArray = arrayRandom (5, 1, 100);
 console.log(myArray);
 listNum.innerHTML = myArray;
 
-// imposto timer di secondi e faccio scomparire la lista di numeri:
-setTimeout(function(){
-    listNum.style.display = "none";
-}, 2000);
+// imposto timer di secondi:
+let seconds = 5;
+
+let clock = setInterval(function(){
+    console.log(seconds);
+    if(seconds === -1){
+        clearInterval(clock);
+    }else{
+        timer.innerHTML = seconds--;
+    }
+
+}, 1000)
+
+
+
+// faccio scomparire la lista di numeri:
+// setTimeout(function(){
+//     listNum.style.display = "none";
+// }, 2000);
