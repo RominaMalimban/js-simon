@@ -5,29 +5,74 @@
 }
 
 body{
+    background-image: url(../img/tempo.webp);
+    background-size: cover;
+    background-position: 30% 50% ;
     font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black
 }
 
 .container{
     width: 60%;
-    margin: 0 auto;
-    
-}
-#timer{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid black;
-    line-height: 80px;
-    text-align: center;
-    margin-bottom: 10px;
+    background-color: #465366ac;
+    padding: 20px ;
+    border: 3px solid #3d4751;
 }
 
-#indovina, #inputs{
+#timer{
+    display: inline-block; 
+}
+
+#timer, input{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 40px 0;
+    text-align: center;
+    font-size: 40px;
+    line-height: 100px;
+    border: 5px solid #000;
+    background-color: rgba(255, 255, 255, 0.518);
+}
+
+.numbers{
+    font-size: 50px;
+}
+
+#inputs{
     display: none;
 }
 
-#inputs input{
+button{
     width: 70px;
-    height: 70px;
+    height: 30px;
+    margin-left: 20px;
+    padding: 5px ;
+    border-radius: 5px;
+    border: 5px solid #000;
+    background-color: rgba(255, 255, 255, 0.518);
+}
+
+/* rimuovere scrollbar in input per Chrome */
+input[type=number] {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* rimuovere scrollbar in input per Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+h2{
+    margin: 20px;
+}
+
+#zero, #error{
+    color: rgb(152, 22, 22);
 }
